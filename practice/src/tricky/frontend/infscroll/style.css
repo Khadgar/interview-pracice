@@ -1,0 +1,17 @@
+.container {
+  overflow-y: scroll;
+  height: 400px;
+  padding: 0;
+}
+
+.random-tile {
+  background-color: grey;
+  margin: 10px 0;
+  height: 150px;
+  width: 100%;
+}
+
+#sentinel {
+  width: 1px;
+  height: 1px;
+}

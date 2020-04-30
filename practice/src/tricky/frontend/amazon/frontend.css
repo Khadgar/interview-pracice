@@ -1,0 +1,50 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonContainer {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  border: 1px solid darkblue;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: cornflowerblue;
+  box-shadow: 0 3px grey;
+  cursor: pointer;
+  margin: 4px;
+}
+
+.buttonLabel {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+span {
+  margin-right: 2px;
+}
+
+.buttonContainer:hover {
+  background-color: #d0dffa;
+}
+
+.buttonContainer:active {
+  box-shadow: 0 0px;
+  transform: translateY(3px);
+}
+
+.buttonLabel {
+  font-weight: bold;
+}
+
+.number {
+  font-weight: bold;
+  margin-right: 2px;
+}

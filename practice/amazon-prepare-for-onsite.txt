@@ -1,0 +1,26 @@
+Leadership Principels to focus:
+- Ownership
+- Invent and Simplify
+- HAVE HIGH STANDARDS
+- THINKING BIG
+- BIAS FOR ACTION
+- EARN TRUST OF OTHERS
+- DIVE DEEP
+- HAVE BACKBONE: DISAGREE AND COMMIT
+- SELF CRITICAL (Learn And Be Curious)
+- DELIVER RESULTS
+- Good Intuition & Judgment (Are Right, A Lot)
+
+
+Coding:
+- System Design for Frontend:
+  - AWW app to draw: https://awwapp.com/#
+  - Frontend performance: client side caching...
+  -
+  - HTML, CSS, JS
+
+- Data Structures
+  - converting JSON
+  - React focused to build frontend components
+
+Chris Martin: +12146368677

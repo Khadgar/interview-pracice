@@ -1,0 +1,87 @@
+import React, { Component } from "react";
+import "./styles.css";
+import { v4 as uuidv4 } from "uuid";
+
+class App extends Component {
+  constructor() {
+    super();
+    this.state = { messages: [], message: "" };
+  }
+
+  handleBtnClick = () => {
+    const message = {
+      id: uuidv4(),
+      speaker: "Doctor",
+      text: this.state.message
+    };
+    fetch(
+      "https://emdenginterview.azurewebsites.net/api/v1/conversations/DanielSzaniszlo/messages?code=DYyjZd7vgaHgRSBXH/c6WcE/AUh0qFv/Rehisv0fSTyD191l10Ttog==",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(message)
+      }
+    )
+      .then(response => {
+        return response.json();
+      })
+      .then(json => {
+        const newMessages = [...this.state.messages, json];
+        this.setState({ messages: newMessages, message: "" });
+      });
+  };
+
+  handleChange = event => {
+    this.setState({ [event.target.id]: event.target.value });
+  };
+
+  componentDidMount() {
+    fetch(
+      "https://emdenginterview.azurewebsites.net/api/v1/conversations/DanielSzaniszlo/messages?code=XB6CrVX5dvjLcdHBX2F4zu2ZGsMn/jAiqi2fsnhKcEoAXPESAO4fZA=="
+    )
+      .then(response => {
+        return response.json();
+      })
+      .then(json => {
+        this.setState({ messages: json });
+      });
+  }
+
+  renderMessage(message, key) {
+    return (
+      <div className={`messageContainer ${message.speaker}`} key={message.id}>
+        <div className="speaker">{message.text}</div>
+      </div>
+    );
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <h1>Chat</h1>
+        <div className="messagesContainer">
+          {this.state.messages.map(message => {
+            return this.renderMessage(message);
+          })}
+        </div>
+        <div className="inputContainer">
+          <input
+            type="text"
+            id="message"
+            value={this.state.message}
+            onChange={this.handleChange}
+          />
+          <button
+            onClick={() => {
+              this.handleBtnClick();
+            }}
+          >
+            SEND
+          </button>
+        </div>
+      </div>
+    );
+  }
+}
+
+export default App;

@@ -1,0 +1,108 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gameContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+}
+
+.status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid gray;
+}
+
+.startBtn {
+  width: 100px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  margin: 4px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.startBtn:hover {
+  background-color: gray;
+  color: white;
+}
+
+.startBtn:active {
+  background-color: lightgray;
+  color: black;
+}
+
+.resultContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 120px;
+  height: 30px;
+  border: 1px solid gray;
+  margin: 10px;
+  border-radius: 4px;
+}
+
+.result {
+  display: flex;
+}
+
+.nextPlayerContainer {
+  display: flex;
+}
+
+.nextPlayer-label {
+  margin-right: 4px;
+}
+
+.result-label {
+  margin-right: 4px;
+}
+
+.notificationContainer {
+  width: 150px;
+  height: 200px;
+  border: 1px dashed gray;
+  border-radius: 4px;
+}
+
+.notification {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.notificationElement:nth-child(even) {
+  background-color: lightgray;
+}

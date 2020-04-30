@@ -1,0 +1,6 @@
+
+
+Generate parenthesis
+find prime factorization of a number
+minimum in rotated sorted array
+design hashmap
