@@ -1,0 +1,32 @@
+***Q:*** Given a set of rooms, some of them empty, some locked, and some containing guards.
+Find the distance to the nearest guard for all empty rooms.  (Each sqare is a room, there is a door between each room.)
+Sample: (L=Locked, G = Guard, . = empty)
+| .| .| L| .| .| .|
+| .| .| .| .| .| .|
+| .| G| L| G| .| G|
+| .| .| .| .| .| G|
+| .| L| L| .| .| G|
+
+
+var findGuards = function(grid){
+    const queue = getGuardLocation(grid);
+    const directions = [[-1,0],[1,0],[]] //define the 4 directions here
+
+    while(queue.length>0){
+        const size = queue.length;
+        let steps = 1;
+        for(let i=0;i<size;i++){
+            const position = queue.shift();
+            for(let j=0;j<directions.length;j++){
+                const x = position[0]+directions[j][0];
+                const y = position[1]+directions[j][1];
+                if(isValid(grid,x,y)) and if {
+                    grid[x][y] = step;
+                    queue.push([x,y]);
+                }
+                step++;
+            }
+        }
+    }
+
+}
